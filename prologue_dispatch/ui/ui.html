@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <title>Dispatch</title>
+</head>
+<body>
+    <!-- ALERT STACK (top right, no focus needed) -->
+    <div id="alert-stack"></div>
+
+    <!-- ACTION BAR (below alerts) -->
+    <div id="action-bar" class="hidden">
+        <div class="action-btn accent" id="btn-respond">
+            <span class="keybadge">E</span> RESPOND
+        </div>
+        <div class="action-btn" id="btn-allcalls">
+            <span class="keybadge">K</span> ALL CALLS
+        </div>
+    </div>
+
+    <!-- GPS TOAST -->
+    <div id="gps-toast" class="hidden">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>GPS WAYPOINT SET</span>
+    </div>
+
+    <!-- DISPATCH LOG (K menu) -->
+    <div id="dispatch-log" class="hidden">
+        <div class="log-header">
+            <div>
+                <h2>DISPATCH LOG</h2>
+                <span id="log-count">0 calls</span>
+            </div>
+            <div class="log-close" id="log-close-btn">
+                <span class="keybadge sm">K</span> CLOSE
+            </div>
+        </div>
+        <div class="log-filters" id="log-filters">
+            <div class="filter-tab active" data-filter="all">ALL</div>
+            <div class="filter-tab" data-filter="panic">PANIC</div>
+            <div class="filter-tab" data-filter="shooting">SHOOTING</div>
+            <div class="filter-tab" data-filter="drugs">DRUGS</div>
+            <div class="filter-tab" data-filter="theft">THEFT</div>
+            <div class="filter-tab" data-filter="alert">ALERTS</div>
+        </div>
+        <div class="log-list" id="log-list"></div>
+    </div>
+
+    <!-- LARGE DISPATCH (O menu) -->
+    <div id="large-dispatch" class="hidden">
+        <div class="ld-bg"></div>
+
+        <div class="ld-units-panel">
+            <h1>Units</h1>
+            <div class="ld-units-list" id="ld-units-list"></div>
+        </div>
+
+        <div class="ld-controller" id="ld-controller">
+            <div class="ld-status-bar" id="ld-my-status-bar"></div>
+
+            <div class="ld-ctrl-left">
+                <div class="ld-callsign-row">
+                    <input type="text" id="ld-callsign-input" maxlength="5" value="0A-00">
+                    <div class="ld-callsign-btn" id="ld-callsign-btn">
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="ld-status-dots">
+                    <div class="status-dot green" data-status="greenSt"></div>
+                    <div class="status-dot orange" data-status="orangeSt"></div>
+                    <div class="status-dot red" data-status="redSt"></div>
+                    <div class="status-dot offline" data-status="offlineSt"></div>
+                </div>
+            </div>
+
+            <div class="ld-ctrl-right">
+                <div class="patrol-icon" data-patrol="fa-person"><i class="fa-solid fa-person"></i></div>
+                <div class="patrol-icon" data-patrol="fa-car"><i class="fa-solid fa-car"></i></div>
+                <div class="patrol-icon" data-patrol="fa-helicopter"><i class="fa-solid fa-helicopter"></i></div>
+                <div class="patrol-icon" data-patrol="fa-sailboat"><i class="fa-solid fa-sailboat"></i></div>
+            </div>
+        </div>
+
+        <div class="ld-close" id="ld-close-btn">
+            <span class="keybadge">ESC</span> Close
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

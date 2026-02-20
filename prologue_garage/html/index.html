@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="garage-container" class="hidden">
+        <div class="garage-panel">
+            <div class="panel-header">
+                <div class="header-left">
+                    <h1 class="garage-title" id="garage-label">Garage</h1>
+                    <button class="close-btn" onclick="closeMenu()"><i class="fas fa-xmark"></i></button>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search by name or plate" oninput="filterVehicles()">
+                </div>
+                <div class="tab-bar hidden" id="tab-bar">
+                    <button class="tab-btn active" data-tab="personal" onclick="switchTab('personal')">
+                        <i class="fas fa-car"></i> Personal
+                    </button>
+                    <button class="tab-btn" data-tab="society" onclick="switchTab('society')">
+                        <i class="fas fa-briefcase"></i> Society
+                    </button>
+                </div>
+            </div>
+            <div class="vehicle-list" id="vehicle-list"></div>
+            <div class="empty-state hidden" id="empty-state">
+                <i class="fas fa-car-side"></i>
+                <span>No vehicles stored here</span>
+            </div>
+            <div class="panel-footer">
+                <span id="vehicle-count">0 vehicles</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
