@@ -344,6 +344,10 @@ $(document).on('click', '#log-close-btn', function () {
 $(document).on('click', '#btn-respond', function () {
     if (Dispatch.alerts.length > 0) {
         var latest = Dispatch.alerts[Dispatch.alerts.length - 1];
+        // Use gpsToCall which is proven working
+        if (latest.coords) {
+            $.post('https://prologue_dispatch/gpsToCall', JSON.stringify({ x: latest.coords.x, y: latest.coords.y }));
+        }
         $.post('https://prologue_dispatch/respondAlert', JSON.stringify({ callId: latest.callId }));
         Dispatch.RespondLatest();
     }

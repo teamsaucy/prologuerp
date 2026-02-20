@@ -79,12 +79,13 @@ body {
 }
 
 .alert-card {
-    background: var(--bg-dark);
-    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 6px;
     padding: 12px 14px;
     border-left: 3px solid var(--gold-dim);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     position: relative;
     overflow: hidden;
     animation: alertSlideIn 0.3s ease;
@@ -205,7 +206,9 @@ body {
 
 .action-btn {
     flex: 1;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-subtle);
     border-radius: 5px;
     padding: 8px 0;
@@ -218,7 +221,6 @@ body {
     justify-content: center;
     gap: 6px;
     transition: all 0.2s;
-    backdrop-filter: blur(4px);
 }
 
 .action-btn:hover {
@@ -232,7 +234,7 @@ body {
 }
 
 .action-btn.accent:hover {
-    background: rgba(201,168,76,0.15);
+    background: rgba(201,168,76,0.12);
     border-color: var(--gold);
 }
 
@@ -245,7 +247,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--gold-dim);
     border-radius: 8px;
     padding: 12px 24px;
@@ -278,11 +282,12 @@ body {
     right: 20px;
     width: 400px;
     max-height: 75vh;
-    background: var(--bg-darker);
+    background: rgba(0,0,0,0.35);
     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-radius: 8px;
     border: 1px solid rgba(201,168,76,0.18);
-    box-shadow: 0 8px 48px rgba(0,0,0,0.7), 0 0 40px rgba(201,168,76,0.08);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 30px rgba(201,168,76,0.05);
     z-index: 60;
     overflow: hidden;
     animation: panelSlideIn 0.25s ease;
@@ -373,23 +378,23 @@ body {
 .log-item {
     padding: 10px 12px;
     margin: 3px 0;
-    background: rgba(255,255,255,0.015);
+    background: rgba(255,255,255,0.03);
     border-radius: 5px;
     border-left: 3px solid var(--border-subtle);
     transition: background 0.15s;
 }
 
 .log-item:hover {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.06);
 }
 
 .log-item.panic {
-    background: rgba(180,30,30,0.06);
+    background: rgba(180,30,30,0.1);
     border-left-color: rgba(220,50,50,0.5);
 }
 
 .log-item.drugs {
-    background: rgba(100,50,180,0.04);
+    background: rgba(100,50,180,0.08);
     border-left-color: rgba(130,80,220,0.5);
 }
 
@@ -502,7 +507,7 @@ body {
 .ld-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(0,0,0,0.75) 18%, transparent 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.45) 14%, transparent 100%);
     animation: ldBgIn 0.4s ease;
 }
 
@@ -535,7 +540,7 @@ body {
 }
 
 .ld-unit {
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.3);
     border-radius: 4px;
     margin-bottom: 3px;
     cursor: pointer;
@@ -556,7 +561,7 @@ body {
     display: flex;
     align-items: center;
     height: 34px;
-    background: rgba(10,10,10,0.9);
+    background: rgba(10,10,10,0.3);
     border-radius: 3px;
     margin: 3px;
 }
@@ -612,7 +617,9 @@ body {
     left: 20px;
     width: 270px;
     height: 90px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 6px;
     display: flex;
     z-index: 20;
@@ -739,7 +746,9 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 5px;
     padding: 8px 16px;

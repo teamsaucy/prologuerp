@@ -126,14 +126,13 @@ end
 -- E - Respond to latest alert
 RegisterKeyMapping('dispatchRespond', 'Dispatch: Respond to alert', 'keyboard', 'E')
 RegisterCommand('dispatchRespond', function()
-    if Show and #Calls > 0 then
+    if #Calls > 0 then
         local latestCall = Calls[#Calls]
         SetNewWaypoint(latestCall.coords.x, latestCall.coords.y)
         SendNUIMessage({ type = 'respondLatest' })
 
         TriggerServerEvent('prologue_dispatch:Server:respondCall', latestCall.callId, Config.DefaultDispatchNumber)
 
-        -- Flash confirmation
         PlaySoundFrontend(-1, "WAYPOINT_SET", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0)
     end
 end, false)

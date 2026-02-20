@@ -5,7 +5,7 @@ Config.Locale = 'en'
 Config.Sound = true
 Config.Measurement = true          -- true = km, false = miles
 Config.ShootingAlerts = true
-Config.ShootingCooldown = 30       -- seconds
+Config.ShootingCooldown = 5        -- seconds
 Config.BlipDeletion = 30           -- seconds
 Config.AlertDismissTime = 5        -- seconds before alert auto-dismisses from HUD
 
