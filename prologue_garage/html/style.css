@@ -33,12 +33,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+    background: transparent !important;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--text-primary);
     overflow: hidden;
     user-select: none;
-    background: transparent;
 }
 
 .hidden { display: none !important; }
@@ -58,7 +61,7 @@ body {
 .garage-panel {
     width: 370px;
     height: 100%;
-    background: rgba(6, 6, 8, 0.75);
+    background: rgba(2, 2, 4, 0.88);
     border: 1px solid var(--border-gold);
     border-radius: 16px;
     display: flex;
@@ -66,7 +69,6 @@ body {
     pointer-events: auto;
     overflow: hidden;
     animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    backdrop-filter: blur(20px);
     box-shadow:
         4px 0 60px rgba(0, 0, 0, 0.4),
         0 0 1px var(--border-gold);
@@ -192,7 +194,7 @@ body {
     font-size: 10px; font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
     padding: 10px 6px 4px;
     display: flex; align-items: center; gap: 8px;
 }
